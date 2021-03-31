@@ -1,0 +1,18 @@
+<app-admin-nav></app-admin-nav>
+
+<div class="container-fluid d-flex justify-content-center align-items-center bg-light vw-100 vh-100">
+
+    <div class="col-md-4 ml-1 mr-1 bg-primary d-flex justify-content-center align-items-center" style="height: 60%;">
+        <button class="btn btn-primary" (click)="getPendingDrs()">PENDING</button>
+    </div>
+
+    <div class="col-md-4 mr-1 bg-success d-flex justify-content-center align-items-center " style="height: 60%;">
+        <button class="btn btn-success" (click)="getApprovedDrs()">APPROVED</button>
+    </div>
+
+    <div class="col-md-4 mr-1 bg-danger d-flex justify-content-center align-items-center" style="height: 60%;">
+        <button class="btn btn-danger" (click)="getRejectedDrs()">REJECTED</button>
+    </div>
+
+</div>
+<app-footer></app-footer>

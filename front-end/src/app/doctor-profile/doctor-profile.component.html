@@ -1,0 +1,38 @@
+<app-logged-nav></app-logged-nav>
+<div class="container">
+    <div class="card mx-auto mt-5">
+        <div class="card-body">
+            <div class="mb-3"><img
+                    src="https://thumbs.dreamstime.com/z/smiling-female-doctor-holding-medical-records-lab-coat-her-office-clipboard-looking-camera-56673035.jpg"
+                    width="200" /></div>
+            <h3 class="card-title">Profile</h3>
+            <h6 class="card-subtitle mb-2 text-muted">Following are the details for Dr. {{doctor.firstName}}</h6>
+            <div class="row rone mt-4">
+                <div class="col-md-6">
+                    <p class="text-muted"><i class="far fa-check-circle"></i>First Name: {{doctor.firstName}}</p>
+                    <p class="text-muted"><i class="far fa-check-circle"></i>Last Name: {{doctor.lastName}}</p>
+                    <p class="text-muted"><i class="far fa-check-circle"></i>Contact: {{doctor.mobileNumber}}</p>
+                    <p class="text-muted"><i class="far fa-check-circle"></i>Email: {{doctor.emailId}}</p>
+
+                </div>
+                <div class="col-md-6">
+                    <p class="text-muted"><i class="far fa-check-circle"></i>Hospital Name: {{doctor.hospitalName}}</p>
+                    <p class="text-muted"><i class="far fa-check-circle"></i>Location :
+                        {{doctor.area}}, {{doctor.city}}.</p>
+                    <p class="text-muted"><i class="far fa-check-circle"></i>State: {{doctor.state}}</p>
+                    <p class="text-muted"><i class="far fa-check-circle"></i>Experience: {{doctor.experience}} Years</p>
+                </div>
+
+            </div>
+            <div class="d-flex ">
+                <button type="button" (click)="goBackFromDrProfile()"
+                    class="col-md-3 btn btn-dark mt-3  "><span>Back</span></button>
+                <button type="button" (click)="bookAppointment(doctor.id)"
+                    class="col-md-3 btn btn-info mt-3 ml-5"><span>Book Appointment</span></button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

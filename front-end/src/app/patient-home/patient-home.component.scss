@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+html,
+body {
+  margin: 0;
+}
+
+.myclass {
+  height: 100vh;
+  background: url("https://wallpapercave.com/wp/wp2968489.jpg");
+ 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.welcomeBoard{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    
+}

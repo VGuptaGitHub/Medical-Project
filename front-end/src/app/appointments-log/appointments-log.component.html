@@ -1,0 +1,84 @@
+<app-doc-navbar></app-doc-navbar>
+
+<div class="container-fluid d-flex justify-content-center vw-100 vh-100 col-md-12 col-sm-12 ">
+
+    <div class="container rounded col-md-6 mt-5 bg-white p-md-5">
+        <div class="h2 font-weight-bold">List of Accepted Appointments</div>
+        <div class="table-responsive mt-5">
+            <table class="table">
+                <thead class="bg-success">
+                    <tr>
+                        <th scope="col">Name </th>
+                        <th scope="col">Contact No</th>
+                        <th scope="col">Time </th>
+                        <th scope="col">Date </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr class="bg-blue" *ngFor="let appointment1 of appointmentListApproved">
+                        <td class="pt-2">
+                            <!-- <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="rounded-circle" alt=""> -->
+                            <div class="pl-lg-5 pl-md-3 pl-1 ">{{appointment1.name}} {{appointment1.surname}}</div>
+                        </td>
+                        <td class="pt-3 mt-1 name">{{appointment1.mobNo}}</td>
+
+                        <td class="pt-3 mt-1 name">{{appointment1.time}}</td>
+
+                        <td class="pt-3 mt-1">{{appointment1.date}}</td>
+
+
+                        <!-- <td class="pt-3"><span class="fa fa-check pl-3">pending</span></td>
+                        <td class="pt-3"><span class="fa fa-ellipsis-v btn">update</span></td> -->
+
+                    </tr>
+                    <tr id="spacing-row">
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container rounded col-md-6 mt-5 bg-white p-md-5">
+        <div class="h2 font-weight-bold">List of Rejected Appointments</div>
+        <div class="table-responsive mt-5">
+            <table class="table">
+                <thead class="bg-danger">
+                    <tr>
+                        <th scope="col">Name </th>
+                        <th scope="col">Contact No</th>
+                        <th scope="col">Time </th>
+                        <th scope="col">Date </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr class="bg-blue" *ngFor="let appointment2 of appointmentListRejected">
+                        <td class="pt-2">
+                            <!-- <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="rounded-circle" alt=""> -->
+                            <div class="pl-lg-5 pl-md-3 pl-1 ">{{appointment2.name}} {{appointment2.surname}}</div>
+                        </td>
+                        <td class="pt-3 mt-1 name">{{appointment2.mobNo}}</td>
+
+                        <td class="pt-3 mt-1 name">{{appointment2.time}}</td>
+
+                        <td class="pt-3 mt-1">{{appointment2.date}}</td>
+
+
+                    </tr>
+                    <tr id="spacing-row">
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<app-footer></app-footer>

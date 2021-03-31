@@ -1,0 +1,24 @@
+<app-logged-nav></app-logged-nav>
+<div class="container mt-4 mb-4">
+
+    <h5>Professionals</h5>
+    <div class="row g-2" *ngFor="let doctor of doctors">
+        <div class="col-md-6">
+            <div class="product-card d-flex flex-row align-items-center">
+                <div class="text-center"> <img
+                        src="https://thumbs.dreamstime.com/z/smiling-female-doctor-holding-medical-records-lab-coat-her-office-clipboard-looking-camera-56673035.jpg"
+                        width="200">
+                </div>
+                <div class="">
+                    <h6 class="mb-1">Dr. {{doctor.firstName}} {{doctor.lastName}}</h6> <span>{{ doctor.city }}</span>
+                    <div class="buttons mt-3">
+                        <button (click)="doctorDetails(doctor.id)"
+                            class="btn btn-outline-info btn-sm wishlist">Show Profile</button>
+                        <button (click)="bookAppointment(doctor.id)" class="btn btn-primary btn-sm ml-1 ">Book
+                            Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    </div>

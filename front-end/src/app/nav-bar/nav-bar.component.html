@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark  sticky-top " style="background-color: #002f5c">
+    <section id="headnev" class="navbar navbar-fixed-top"></section>
+   
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            <img src="../../assets/l3.png" width="50" height="50" alt="">
+          </a>
+        <a class="navbar-brand">Medico</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <!-- <a class="nav-link" href="#">Login</a> -->
+                
+                    <div class="text-center mt-1">
+                        <div class="dropdown">
+                        
+                            <button class="btn btn-light " style="font-weight: bold; font-size: larger;">LOGIN <i
+                                    class="fa fa-caret-down"></i></button>
+                            <div class="dropdown-content bg-secondary">
+                                <a style="font-weight: bold; font-size: large;" href="admin/login">Admin</a>
+                                <a style="font-weight: bold; font-size: larger;" href="patient/login">Patient</a>
+                                <a style="font-weight: bold; font-size: larger;" href="doctor/login">Doctor</a>
+
+                            </div>
+                        
+                        
+                            
+                        </div>
+                        <button class="btn btn-danger " style="font-weight: bold; font-size: larger; margin:10px;" (click)="goToPage('corona')">Track Covid Cases </button> 
+                 </div> 
+                
+                
+                </li>
+                
+            </ul>
+            
+        </div>
+    
+        
+    </div>
+    
+</nav>

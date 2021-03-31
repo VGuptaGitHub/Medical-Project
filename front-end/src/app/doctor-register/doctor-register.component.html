@@ -1,0 +1,198 @@
+<div class="wrapper d-flex justify-content-center flex-column px-md-5 px-1">
+
+    <div class="h3 text-center font-weight-bold">Doctor Registration</div>
+    <div class="row my-4">
+        <div class="col-md-5"> <label>First Name</label> <input type="text" placeholder=" "
+                [(ngModel)]="doctor.firstName" required style="padding-left: 40px;padding-right: 40px;"
+                #firstName="ngModel" [class.is-invalid]="firstName.invalid && firstName.touched" />
+
+            <div *ngIf="firstName.errors && (firstName.touched && firstName.invalid)">
+                <small class="text-danger" *ngIf="firstName.errors.required">*FirstName is required</small>
+                <small class="text-danger" *ngIf="firstName.errors.pattern">*Enter the valid Email Id</small>
+            </div>
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5"> <label>Last Name</label> <input type="text" placeholder=" " [(ngModel)]="doctor.lastName"
+                required style="padding-left: 40px;padding-right: 40px;" #lastName="ngModel"
+                [class.is-invalid]="lastName.invalid && lastName.touched" />
+
+            <div *ngIf="lastName.errors && (lastName.touched && lastName.invalid)">
+                <small class="text-danger">*LastName is required</small>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="row my-md-4 my-2">
+
+        <div class="col-md-5 pt-md-0 pt-4"> <label>Username : </label><input type="text" placeholder=" "
+                [(ngModel)]="doctor.username" required style="padding-left: 40px;padding-right: 40px;"
+                #username="ngModel" [class.is-invalid]="username.invalid && username.touched">
+
+            <div *ngIf="username.errors && (username.touched && username.invalid)">
+                <small class="text-danger" *ngIf="username.errors.required">*UserName is required</small>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5"> <label>Password</label> <input type="text" [(ngModel)]="doctor.password"
+                #password="ngModel" placeholder=" ">
+            <!-- #password="ngModel" pattern="^.(?=.{8,})((?=.[!@#$%^&]){1})(?=.\d)((?=.[a-z]){1})((?=.[A-Z]){1}).*$"> -->
+
+            <!-- <div *ngIf="password.errors && (password.touched && password.invalid)">
+
+                <small class="text-danger" *ngIf="password.errors.required">*passwoord is required</small>
+                <small class="text-danger" *ngIf="password.errors.pattern">*password must contain 1 capital, 1 small
+                    letter,<br> 1 special character and number</small>
+            </div> -->
+        </div>
+
+    </div>
+
+
+
+    <div class="row my-md-4 my-2">
+
+        <div class="col-md-5"> <label>Email : </label> <input type="text" placeholder=" " [(ngModel)]="doctor.emailId"
+                #emailId="ngModel" [class.is-invalid]="emailId.invalid && emailId.touched"
+                pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+
+            <div *ngIf="emailId.errors && (emailId.touched && emailId.invalid)">
+                <small class="text-danger" *ngIf="emailId.errors.required">*Email Id is required</small>
+                <small class="text-danger" *ngIf="emailId.errors.pattern">*Enter the valid Email Id</small>
+            </div>
+        </div>
+
+
+        <div class="col-md-1"></div>
+        <div class="col-md-5 pt-md-0 pt-4"> <label>Phone number</label><input type="text" placeholder=" "
+                [(ngModel)]="doctor.mobileNumber" #mobile="ngModel"
+                [class.is-invalid]="mobile.invalid && mobile.touched" pattern="^[6-9]\d{9}$">
+
+            <div *ngIf="mobile.errors && (mobile.touched && mobile.invalid)">
+                <small class="text-danger" *ngIf="mobile.errors.required">*mobile is required</small>
+                <small class="text-danger" *ngIf="mobile.errors.pattern">*mobile number must contain 10
+                    digit</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-md-4 my-2">
+        <div class="col-md-5"> <label>Gender</label> <input [(ngModel)]="doctor.sex" #sex="ngModel" type="email"
+                placeholder=" ">
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5"> <label>Experience</label> <input [(ngModel)]="doctor.experience" #experience="ngModel"
+                type="number" placeholder=" ">
+        </div>
+    </div>
+
+
+    <div class="row my-md-4 my-2">
+        <div class="col-md-5 pt-md-0 pt-4"> <label>Age :</label> <input type="number" placeholder=" "
+                [(ngModel)]="doctor.age" required style="padding-left: 40px;padding-right: 40px;" #age="ngModel"
+                [class.is-invalid]="age.invalid && age.touched" />
+
+            <div *ngIf="age.errors && (age.touched && age.invalid)">
+                <small class="text-danger" *ngIf="age.errors.required">*Weight is required</small>
+            </div>
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5 pt-md-0 pt-4"> <label>Hospital Name : </label> <input type="text" placeholder=" "
+                [(ngModel)]="doctor.hospitalName" required style="padding-left: 40px;padding-right: 40px;"
+                #hospitalName="ngModel" [class.is-invalid]="hospitalName.invalid && hospitalName.touched" />
+
+            <div *ngIf="hospitalName.errors && (hospitalName.touched && hospitalName.invalid)">
+                <small class="text-danger" *ngIf="hospitalName.errors.required">*Hospital Address is
+                    required</small>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row my-md-4 my-2">
+
+
+        <div class="col-md-5 pt-md-0 pt-4"> <label>Hospital Address : </label> <input type="text" placeholder=" "
+                [(ngModel)]="doctor.hospitalAddress" required style="padding-left: 40px;padding-right: 40px;"
+                #hospitalAddress="ngModel" [class.is-invalid]="hospitalAddress.invalid && hospitalAddress.touched" />
+
+            <div *ngIf="hospitalAddress.errors && (hospitalAddress.touched && hospitalAddress.invalid)">
+                <small class="text-danger" *ngIf="hospitalAddress.errors.required">*Hospital Address is
+                    required</small>
+            </div>
+        </div>
+
+
+        <div class="col-md-1"></div>
+        <div class="col-md-5"> <label>Area</label> <input type="text" [(ngModel)]="doctor.area" placeholder=" "
+                #area="ngModel">
+
+            <div *ngIf="area.errors && (area.touched && area.invalid)">
+                <small class="text-danger" *ngIf="area.errors.required">*Area is required</small>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="row my-md-4 my-2">
+
+
+        <div class="col-md-5 pt-md-0 pt-4"> <label>City : </label><input type="text" placeholder=" "
+                [(ngModel)]="doctor.city" #city="ngModel" [class.is-invalid]="city.invalid && city.touched"
+                pattern="^[6-9]\d{9}$">
+
+            <div *ngIf="city.errors && (city.touched && city.invalid)">
+                <small class="text-danger" *ngIf="city.errors.required">*City is required</small>
+
+            </div>
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5"> <label>State</label> <input type="text" [(ngModel)]="doctor.state" placeholder=" "
+                #state="ngModel">
+
+            <div *ngIf="state.errors && (state.touched && state.invalid)">
+                <small class="text-danger" *ngIf="state.errors.required">*State is required</small>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class=" row my-md-4 my-2">
+        <div class="col-md-3">
+        </div>
+
+        <div class="col-xs-12 col-md-6  d-flex justify-content-between align-items-center">
+
+            <button type="button" (click)="goBack()" class=" col-md-4 btn btn-info btn-default btn-lg">
+                Back
+            </button>
+
+            <button type="button" (click)="onSubmit()" class="ml-1 col-md-4 btn btn-info btn-default btn-lg">
+                Register
+            </button>
+
+        </div>
+
+        <div class="col-md-3 pt-md-0 pt-4">
+
+        </div>
+    </div>
+</div>

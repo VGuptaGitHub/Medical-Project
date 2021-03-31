@@ -1,0 +1,140 @@
+<div class="wrapper d-flex justify-content-center flex-column px-md-5 px-1">
+
+    <div class="h3 text-center font-weight-bold">Patient Registration</div>
+
+
+    <div class="row my-4">
+        <div class="col-md-5"> <label>First Name :</label> <input type="text" placeholder=" "
+                [(ngModel)]="patient.firstName" required style="padding-left: 40px;padding-right: 40px;"
+                #firstName="ngModel" [class.is-invalid]="firstName.invalid && firstName.touched" />
+
+            <div *ngIf="firstName.errors && (firstName.touched && firstName.invalid)">
+                <small class="text-danger" *ngIf="firstName.errors.required">*FirstName is required</small>
+            </div>
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5"> <label>Last Name : </label> <input type="text" placeholder=" "
+                [(ngModel)]="patient.lastName" required style="padding-left: 40px;padding-right: 40px;"
+                #lastName="ngModel" [class.is-invalid]="lastName.invalid && lastName.touched" />
+
+            <div *ngIf="lastName.errors && (lastName.touched && lastName.invalid)">
+                <small class="text-danger">*LastName is required</small>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row my-md-4 my-2">
+        <div class="col-md-5 pt-md-0 pt-4"> <label>Weight : </label> <input type="text" placeholder=" "
+                [(ngModel)]="patient.weight" required style="padding-left: 40px;padding-right: 40px;" #weight="ngModel"
+                [class.is-invalid]="weight.invalid && weight.touched" />
+
+            <div *ngIf="weight.errors && (weight.touched && weight.invalid)">
+                <small class="text-danger" *ngIf="weight.errors.required">*Weight is required</small>
+            </div>
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5 pt-md-0 pt-4"> <label>Height :</label> <input type="text" placeholder=" "
+                [(ngModel)]="patient.height" required style="padding-left: 40px;padding-right: 40px;" #height="ngModel"
+                [class.is-invalid]="height.invalid && height.touched" />
+
+            <div *ngIf="height.errors && (height.touched && height.invalid)">
+                <small class="text-danger" *ngIf="height.errors.required">*Height is
+                    required</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-md-4 my-2">
+        <div class="col-md-5 pt-md-0 pt-4"> <label>Username :</label><input type="text" placeholder=" "
+                [(ngModel)]="patient.userName" required style="padding-left: 40px;padding-right: 40px;"
+                #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched">
+
+            <div *ngIf="userName.errors && (userName.touched && userName.invalid)">
+                <small class="text-danger" *ngIf="userName.errors.required">*UserName is required</small>
+            </div>
+        </div>
+
+        <div class="col-md-1"></div>
+
+
+
+
+        <div class="col-md-5"> <label>Password :</label> <input type="email" placeholder=" "
+                [(ngModel)]="patient.password" #password="ngModel"
+                pattern="^.(?=.{8,})((?=.[!@#$%^&]){1})(?=.\d)((?=.[a-z]){1})((?=.[A-Z]){1}).*$">
+
+            <div *ngIf="password.errors && (password.touched && password.invalid)">
+                <small class="text-danger" *ngIf="password.errors.required">*passwoord is required</small>
+                <small class="text-danger" *ngIf="password.errors.pattern">*password must contain 1 capital, 1 small
+                    letter,<br> 1 special character and number</small>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row my-md-4 my-2">
+        <div class="col-md-5"> <label>Email Id :</label> <input type="text" placeholder=" " #emailId="ngModel"
+                [(ngModel)]="patient.emailId" [class.is-invalid]="emailId.invalid && emailId.touched"
+                pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+
+            <div *ngIf="emailId.errors && (emailId.touched && emailId.invalid)">
+                <small class="text-danger" *ngIf="emailId.errors.required">*Email Id is required</small>
+                <small class="text-danger" *ngIf="emailId.errors.pattern">*Enter the valid Email Id</small>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5 pt-md-0 pt-4"> <label>Phone Number : </label><input type="text" placeholder=" "
+                [(ngModel)]="patient.mobNo" #mobNo="ngModel" [class.is-invalid]="mobNo.invalid && mobNo.touched"
+                pattern="^[6-9]\d{9}$">
+
+            <div *ngIf="mobNo.errors && (mobNo.touched && mobNo.invalid)">
+                <small class="text-danger" *ngIf="mobNo.errors.required">*mobile is required</small>
+                <small class="text-danger" *ngIf="mobNo.errors.pattern">*mobile number must contain 10
+                    digit</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-md-4 my-2">
+        <div class="col-md-5"> <label>Gender : </label> <input type="email" placeholder=" ">
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5 pt-md-0 pt-4"> <label>Age :</label>
+
+            <input type="number" id="age" [(ngModel)]="patient.age" #age="ngModel" class="form-control">
+
+        </div>
+    </div>
+
+    <div class=" row my-md-4 my-2">
+        <div class="col-md-3">
+        </div>
+
+        <div class="col-xs-12 col-md-6  d-flex justify-content-between align-items-center">
+
+            <button type="button" (click)="goBack()" class=" col-md-4 btn btn-info btn-default btn-lg">
+                Back
+            </button>
+
+            <button type="button" (click)="onSubmit()" class="ml-1 col-md-4 btn btn-info btn-default btn-lg">
+                Register
+            </button>
+
+        </div>
+
+        <div class="col-md-3 pt-md-0 pt-4">
+
+        </div>
+    </div>
+
+
+
+</div>

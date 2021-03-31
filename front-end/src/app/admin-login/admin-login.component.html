@@ -1,0 +1,28 @@
+<div class="container-fluid vh-100 vw-100 d-flex justify-content-center align-items-center">
+
+    <div class=" col-md-5  card border-10 rounded-0">
+
+        <div class=" col-xs-12 card border-0 rounded-0 card0">
+            <h1 style="text-align: center; font-style:normal;font-weight: bold;margin-bottom: 10%;">Admin Login</h1>
+            <!-- <p>Please login with your account</p> -->
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label label class="font-weight-bold mb-0">Username :</label>
+                    <input type="text" [(ngModel)]="admin.adminUsername" class="form-control" id="adminUsername"
+                        name="adminUsername">
+                </div>
+
+                <div class="form-group">
+                    <label class="font-weight-bold mb-0"> Password : </label>
+                    <input type="password" [(ngModel)]="admin.adminPassword" class="form-control" id="adminPassword"
+                        name="adminPassword">
+                </div>
+                <div class="row justify-content-center mt-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>
