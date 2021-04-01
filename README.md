@@ -1,5 +1,5 @@
 # Medical-Project
-This is CDAC Project.
+first run command (npm init) for front-end.  
 
 
 Medi-Co is web portal for Primary Medical Consulting. Here we have proposed a system that connects 
